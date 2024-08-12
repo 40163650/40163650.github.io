@@ -1,0 +1,13 @@
+Recently I discovered the potential of bots for myself. Little programs that inhabit IRC (or any chat application for that matter) channels that do the bidding of their users.
+
+I am against bots being used maliciously or deceptively - a bot should always identify itself as a bot, never a human. But that does not mean we cannot have fun with them.
+
+Having made small bots for IRC (basically a chat logger to monitor everything that's said when I'm not online) and one for Slack (a bot that could do mini-games, rock paper scissors etc.) I wanted to make one for Discord.
+
+So that is what I did. The bot now welcomes new users to the server and asks them to verify that they are human with a simple message, then it gives them a role that allows them to talk in the public channels.
+
+I have the bot set up on a Raspberry Pi Zero W running 24/7 (pictured left).
+
+I made the bot using NodeJS, it is a language that makes things somewhat trivial to do due to the sheer number of small public libraries that one can borrow from to make their application (like Python, or so I've been told) and it is for this reason that I do not like it, it's <a href="https://www.bleepingcomputer.com/news/security/compromised-javascript-package-caught-stealing-npm-credentials/">insecure</a>.
+
+So I have set myself the task of writing a wrapper / library for the Discord API in C++. There is one existing one that I know of, but according to the author, it "does not do any networking" - which seems to me like a fundamental flaw.

@@ -1,0 +1,9 @@
+I once again had the chance to work in a team in my final year of University. Scrapitalism was an RTS whose premise was that Tim Curry wanted to escape to <a href="https://www.youtube.com/watch?v=g1Sq1Nr58hM">the one place not yet corrupted by capitalism - SPACE!</a>
+
+My role on this project was to implement the saving and loading functionality. I did this using JSON by serialising all the objects in the scene. In order to do this I used the JSON library by <a href="https://github.com/nlohmann/json">Niels Lohmann</a>.
+
+If I were to go back to this project again I would add some encryption and decryption to the save files so that they could not be so easily edited by players.
+
+Here is a video showing the completed game. It was completed using OpenGL again, but this time it did not rely on a framework that we were provided with.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DpTRG49Xh54" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -1,0 +1,9 @@
+After discovering what one could do with post-processing shaders and being a part of modding communities previously (GTA5, Skyrim, The Binding of Isaac) I wanted to see if there was any way to take what was already on the screen, put it in a buffer, manipulate the data then send it back to the screen.
+
+It turns out that such a thing was non-trivial, but there was a program that existed that intercepted what was sent to the screen first. Two, in fact - <a href="http://sfx.thelazy.net/games/">SweetFX</a> and <a href="https://reshade.me/">ReShade</a>.
+
+This allows for DLL injection into any game that runs on DirectX / Direct3D (versions 8-11) or OpenGL. There are a few caveats like it not being blocked by anti-cheat software, and not all games' depth-buffers can be accessed.
+
+Anyway, all this means that you can put your own post-processing on pretty much any game. It is what most of my <a href="https://test-05.weebly.com/">blog</a> is dedicated to.
+
+The image below is of Rainbow 6: Siege. The brightness was set at 22% - a value that seemed alright in the settings. This screenshot was taken before the changes to lighting were introduced.

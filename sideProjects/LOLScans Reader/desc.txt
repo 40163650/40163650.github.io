@@ -1,0 +1,13 @@
+LOLScans is a group of volunteers who translate Manga and Webcomics into English that don't already have English versions.
+
+As a part of this group I created a PHP based web application for users to read our comics.
+
+I put in place some measures to copyright protect the images there. I even went so far as to create an application for our staff to use to "encrypt" the images, then when they were uploaded to the reader application, they would be automatically decrypted.
+
+I have published an open-source version of this application but it is currently out of date.
+
+You can find the reader webpage <a href="https://lolscans.com/reader">here</a>
+
+You can find the open-source code <a href="https://bitbucket.org/40163650/manga-and-webcomic-reader-2000/src"> here</a>
+
+I have also implemented several other tools for the group including a page that shows all of our credits pages - so we have a record of who did what, and a <a href="https://lolscans.com/progress/">page that shows our progress</a> for completing various chapters as well as when each part was uploaded.

@@ -1,0 +1,11 @@
+Pebble was a brand of Smart-Watch before they were bought out by FitBit. The development community however, is still active.
+
+I wrote and released various watchfaces apps for the Pebble for free. My most significant watchfaces for the Pebble were:
+
+Written Time - A face that showed the time and date in words including ordinals.
+
+0xTIME - A face that showed the time in base 16.
+
+Japanese Time - A face that used Japanese (and Chinese) characters to display the time. Notably they have no "0" character even though they use a base-10 number system. Another feature to this face was that users could connect their watch to their phone to customise the colour of the characters and background.
+
+My most popular app for the Pebble was TimeR - A timer for the round face variant of watch. It was able to run in the background and vibrate when it completed, the user could then shake the watch to cease the vibrations. It had a neat graphic of a ring that contracted as the time ran out (a bit like a dying pacman).

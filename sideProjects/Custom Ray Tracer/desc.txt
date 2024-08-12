@@ -1,0 +1,63 @@
+The ray tracer in the student projects section was given to me completed, all I had to do was parallelise it. This ray tracer I wrote entirely myself following Peter Shirley's tutorial book series. <a href="http://in1weekend.blogspot.com/">Peter's Blog</a>
+
+When I started noticing decreases in performance, I decided to parallelise this one too. Last time I split the image up into chunks and set each thread working on its own chunk. The trouble with that approach was that threads were often waiting for others to finish, and weren't doing anything during that time. This time I decided to get each thread to work on one row of the image at a time, then, once they had finished their one-row task, start working on the next available row. I did so like this:
+
+(shift + scroll to scroll horizontally)
+<pre><code class="language-cpp">
+void drawRow(const int row, camera cam, hitable *world, hitable_list hlist, std::vector<vec3> *p)
+{
+	if (row + 1 > ny)
+		return;
+
+	random rand = random();
+
+	for (int i = 0; i < nx; i++)
+	{
+		vec3 col(0, 0, 0);
+		for (int s = 0; s < ns; s++) // NS = number of samples per pixel
+		{
+			const auto u = float(i   + rand.getRandom()) / float(nx);
+			const auto v = float(row + rand.getRandom()) / float(ny);
+
+			ray r = cam.get_ray(u, v, rand);
+			col += de_nan(colour(r, world, &hlist, 0, rand));
+		}
+		col /= float(ns);
+		col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
+		const int index = (ny - 1 - row) * nx + i;
+
+		(*p)[index] = (*p)[index] + clamp(col, vec3(0, 0, 0), vec3(1, 1, 1));
+	}
+}
+
+// ...In main...
+const int numThreads = std::thread::hardware_concurrency();
+std::vector<std::thread> threads;
+
+int donePixels = 0;
+int activeThreads = 0;
+int rowCounter = 0;
+do
+{
+	while (activeThreads < numThreads)
+	{
+		threads.push_back(std::thread(drawRow, rowCounter++, *cam, world, hlist, &p));
+		activeThreads++;
+	}
+
+	for (auto &t : threads)
+	{
+		if (t.joinable())
+		{
+			activeThreads--;
+			donePixels += nx;
+			t.join();
+		}
+	}
+	std::cout << donePixels * 100 / (nx * ny) << "% done" << std::endl;
+} while (donePixels < nx * ny); // NX = number of pixels wide, NY = number of pixels tall
+</code></pre>
+
+By creating this application myself, I have a much greater understanding of how it works, and can more easily add new features to it. In the future I would like to add model loading as well as some more optimisations, I may even get it to use OpenCL. I want to see if real time ray tracing is possible without using an NVidia RTX GPU.
+
+Here are some of my favourite renders from the project:

@@ -1,0 +1,13 @@
+Radar Something was developed at the 2017 Global Game Jam while I was abroad in The Netherlands.
+
+It used the Unity3D engine and ran using C# scripts.
+
+The premise of the game was that the enemies were invisible to the player until the player shot them with a magic wave - their radar.
+
+My responisibilities for this project mainly included making the ghosts appear when they were shot (fading in) and then getting them to disappear again after a set amount of time.
+
+A lot of the time I spent on the project was maintaining the codebase and fixing bugs. For a team of four, with only two days to finish the game, I was satisfied in my role.
+
+For my automated games design module, I came back to this game. I took an image of random noise, then ran it through various <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">game-of-life</a> algorithms.
+
+Then I used the resulting image to generate a maze for the game.

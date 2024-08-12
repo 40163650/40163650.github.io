@@ -1,0 +1,18 @@
+Formerly known as CAVE (Creative Audio Visual Experience), Project Campfire consists of 2 applications. The first application is the one used to create the second, it is a sort of editor. The second runs on the end user's machine, PS4, XBOX, PC, etc.
+
+The applications are mostly bonus content for existing games. These are art-books, comics, soundtracks, and some custom applications.
+
+IPs that use this technology include:
+<dl>
+<dd>Days Gone</dd>
+<dd>God of War</dd>
+<dd>Concrete Genie</dd>
+<dd>Death Stranding</dd>
+<dd>MediEvil</dd>
+<dd>Predator</dd>
+<dd>The Last of Us Part II</dd>
+<dd>Marvel's Iron Man VR</dd>
+<dd>Final Fantasy VII Remake</dd>
+<dd>Ghost of Tsushima</dd>
+<dd>Ancestors Legacy</dd>
+</dl>

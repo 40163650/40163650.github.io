@@ -1,0 +1,11 @@
+This was my first 3D graphical project. It used a framework similar to one that can be built by following the tutorial at <a href="https://learnopengl.com/">Learn OpenGL</a>.
+
+It used a height map as an input to generate geometry from a mesh of quads. Then I used another map of my own making that dicatated the location of the street lights shown in the scene.
+
+Other features include: A perspective camera, frustum culling, reflections of the skybox on the water, materials (textures, maps and property values), close to 400 point lights (using deferred rendering), a sun that changes colour as it sinks below the horizon, and a spot-light.
+
+It was this project that inspired me to specialise in graphics programming, and what kicked off my post processing themed blog.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8LVRJZEs8Y4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Pictured below are the height map and light map that I used.
